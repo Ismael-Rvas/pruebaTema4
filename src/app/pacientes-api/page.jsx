@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Fallback from "@/components/fallback";
 import Pacientes from "@/components/api-pacientes";
-import AlumnoNuevo from "@/components/api-paciente-nuevo";
+import PacienteNuevo from "@/components/api-paciente-nuevo";
 import { Suspense } from "react";
 
 
 
-async function AlumnosPage({ searchParams }) {
+async function PacientesPage({ searchParams }) {
     const { query } = await searchParams;
 
     // Introducimos un retardo artificial
@@ -17,11 +17,11 @@ async function AlumnosPage({ searchParams }) {
             <Link href="/" className="fixed text-4xl p-2 bg-orange-300 rounded-full mt-8">🏠</Link>
 
             <h1 className='py-10 text-3xl text-blue-500 text-center border-b-4 border-b-blue-500'>
-                ALUMNOS API REST
+                PACIENTES API REST
             </h1>
 
-            <Suspense fallback={<Fallback>Nuevo Alumno ... </Fallback>}>
-                <AlumnoNuevo />
+            <Suspense fallback={<Fallback>Nuevo Paciente ... </Fallback>}>
+                <PacienteNuevo />
             </Suspense>
 
             <Suspense fallback={<Fallback>Obteniendo datos ... </Fallback>}>
@@ -31,4 +31,4 @@ async function AlumnosPage({ searchParams }) {
     );
 }
 
-export default AlumnosPage;
+export default PacientesPage;

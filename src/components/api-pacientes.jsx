@@ -3,8 +3,8 @@ import { revalidatePath } from 'next/cache'
 import { FaPencilAlt } from "react-icons/fa";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 
-async function obtenerAlumnos(query) {
-    const response = await fetch('http://localhost:4000/alumnos')
+async function obtenerPacientes(query) {
+    const response = await fetch('http://localhost:4000/pacientes')
     const pacientes = await response.json()
 
     return pacientes.filter(paciente => paciente.nombre.toLowerCase().includes(query))
@@ -23,7 +23,7 @@ async function eliminarPaciente(formData) {
 
 
 async function Pacientes({ query }) {
-    const pacientes = await obtenerAlumnos(query)
+    const pacientes = await obtenerPacientes(query)
 
     return (
         <>
