@@ -12,6 +12,9 @@ async function nuevoPaciente(formData) {
         method: 'POST',
         body: JSON.stringify({ nombre, localidad, fechaNacimiento})
     })
+
+    // Introducimos un retardo artificial de 2 segundos
+    await new Promise(resolve => setTimeout(resolve, 2000))
     
     revalidatePath('/pacientes-api')
 }

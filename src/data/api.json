@@ -49,6 +49,12 @@
       "nombre": "Susana",
       "especialidad": "Traumatólogo",
       "perfil": "RESIDENTE"
+    },
+    {
+      "id": "e626",
+      "nombre": "daniel",
+      "especialidad": "Patilogo",
+      "perfil": "RESIDENTE"
     }
   ]
 }

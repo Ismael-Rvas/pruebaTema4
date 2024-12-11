@@ -12,6 +12,9 @@ async function nuevoMedico(formData) {
         method: 'POST',
         body: JSON.stringify({ nombre, especialidad: especialidad, perfil: perfil})
     })
+
+    // Introducimos un retardo artificial de 2 segundos
+    await new Promise(resolve => setTimeout(resolve, 2000))
     
     revalidatePath('/medicos-api')
 }
