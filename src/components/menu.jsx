@@ -20,10 +20,10 @@ const menu = [
         text: 'Pacientes-api',
         href: '/pacientes-api'
     },
-    // {
-    //     text: 'Profesores-api',
-    //     href: '/profesores-api'
-    // }
+    {
+        text: 'Medicos-api',
+        href: '/medicos-api'
+    }
 ]
 
 function Menu() {
