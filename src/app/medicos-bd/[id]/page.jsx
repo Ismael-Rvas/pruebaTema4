@@ -1,9 +1,11 @@
 import connection from "@/lib/mysql";
 import Link from "next/link";
 
-async function PaginaMedico({params}, searchParams ) {
+async function PaginaMedico({ params }, searchParams) {
   const { id } = await params;
-  const [rows] = await connection.query("SELECT * FROM medicos WHERE id = ?", [id]);
+  const [rows] = await connection.query("SELECT * FROM medicos WHERE id = ?", [
+    id,
+  ]);
 
   const medico = rows[0];
 
@@ -18,7 +20,9 @@ async function PaginaMedico({params}, searchParams ) {
           Información del medico:
         </h1>
         <p className="text-5xl font-bold text-gray-800 mb-4">{medico.nombre}</p>
-        <p className="text-2xl text-gray-700 mb-2">Especialidad: {medico.especialidad}</p>
+        <p className="text-2xl text-gray-700 mb-2">
+          Especialidad: {medico.especialidad}
+        </p>
         <p className="text-2xl text-gray-700 mb-4">Perfil: {medico.perfil}</p>
       </div>
       <a

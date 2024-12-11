@@ -15,6 +15,9 @@ async function modificarPaciente(formData) {
     [nombre, localidad, fechaNacimiento, id]
   );
 
+  // Introducimos un retardo artificial de 2 segundos
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+
   redirect(`/pacientes-bd/${id}`);
 }
 

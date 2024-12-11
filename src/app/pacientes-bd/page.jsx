@@ -29,6 +29,9 @@ async function insertarPaciente(formData) {
     [nombre, localidad, fechaNacimiento]
   );
 
+  // Introducimos un retardo artificial de 2 segundos
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+
   revalidatePath("/pacientes-bd");
 }
 
@@ -91,35 +94,34 @@ async function PacientesPage() {
           Lista de pacientes (BD)
         </h1>
         <Suspense fallback={<Fallback>Obteniendo datos ... </Fallback>}>
-
-        <div className="flex flex-col">
-          {rows.map((paciente) => (
-            <div
-              key={paciente.id}
-              className="p-2 odd:bg-slate-100 flex justify-between"
-            >
-              <h1>{paciente.nombre}</h1>
-              <div className="flex gap-6">
-                <form>
-                  <input type="hidden" name="id" value={paciente.id} />
-                  <button>
-                    <Link href={`/pacientes-bd/${paciente.id}`}>
-                      <FaMagnifyingGlass />
-                    </Link>
-                  </button>
-                  <button className="mr-5 ml-5" title="MODIFICAR">
-                    <Link href={`/pacientes-bd/${paciente.id}/modificar`}>
-                      <FaPencilAlt />
-                    </Link>
-                  </button>
-                  <button formAction={eliminarPaciente} title="ELIMINAR">
-                    ❌
-                  </button>
-                </form>
+          <div className="flex flex-col">
+            {rows.map((paciente) => (
+              <div
+                key={paciente.id}
+                className="p-2 odd:bg-slate-100 flex justify-between"
+              >
+                <h1>{paciente.nombre}</h1>
+                <div className="flex gap-6">
+                  <form>
+                    <input type="hidden" name="id" value={paciente.id} />
+                    <button>
+                      <Link href={`/pacientes-bd/${paciente.id}`}>
+                        <FaMagnifyingGlass />
+                      </Link>
+                    </button>
+                    <button className="mr-5 ml-5" title="MODIFICAR">
+                      <Link href={`/pacientes-bd/${paciente.id}/modificar`}>
+                        <FaPencilAlt />
+                      </Link>
+                    </button>
+                    <button formAction={eliminarPaciente} title="ELIMINAR">
+                      ❌
+                    </button>
+                  </form>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
         </Suspense>
       </div>
     </section>

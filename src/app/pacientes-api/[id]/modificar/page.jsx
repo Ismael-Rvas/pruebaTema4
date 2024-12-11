@@ -16,6 +16,9 @@ async function modificarPaciente(formData) {
     body: JSON.stringify({ nombre, localidad, fechaNacimiento }),
   });
 
+  // Introducimos un retardo artificial de 2 segundos
+  await new Promise(resolve => setTimeout(resolve, 2000))
+
   redirect(`/pacientes-api/${id}`);
 }
 

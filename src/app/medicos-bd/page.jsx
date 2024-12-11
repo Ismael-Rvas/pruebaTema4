@@ -28,6 +28,9 @@ async function insertarMedico(formData) {
     [nombre, especialidad, perfil]
   );
 
+  // Introducimos un retardo artificial de 2 segundos
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+
   revalidatePath("/medicos-bd");
 }
 
@@ -36,7 +39,10 @@ async function MedicosPage() {
 
   return (
     <section className="min-h-screen max-w-[1024px] mx-auto px-10 py-10">
-      <Link href="/" className="fixed text-4xl p-2 bg-orange-300 rounded-full mt-8">
+      <Link
+        href="/"
+        className="fixed text-4xl p-2 bg-orange-300 rounded-full mt-8"
+      >
         🏠
       </Link>
 
@@ -86,35 +92,34 @@ async function MedicosPage() {
           Lista de Medicos (BD)
         </h1>
         <Suspense fallback={<Fallback>Obteniendo datos ... </Fallback>}>
-
-        <div className="flex flex-col">
-          {rows.map((medico) => (
-            <div
-              key={medico.id}
-              className="p-2 odd:bg-slate-100 flex justify-between"
-            >
-              <h1>{medico.nombre}</h1>
-              <div className="flex gap-6">
-                <form>
-                  <input type="hidden" name="id" value={medico.id} />
-                  <button>
-                    <Link href={`/medicos-bd/${medico.id}`}>
-                      <FaMagnifyingGlass />
-                    </Link>
-                  </button>
-                  <button className="mr-5 ml-5" title="MODIFICAR">
-                    <Link href={"medicos-bd/" + medico.id + "/modificar"}>
-                      <FaPencilAlt />
-                    </Link>
-                  </button>
-                  <button formAction={eliminarMedico} title="ELIMINAR">
-                    ❌
-                  </button>
-                </form>
+          <div className="flex flex-col">
+            {rows.map((medico) => (
+              <div
+                key={medico.id}
+                className="p-2 odd:bg-slate-100 flex justify-between"
+              >
+                <h1>{medico.nombre}</h1>
+                <div className="flex gap-6">
+                  <form>
+                    <input type="hidden" name="id" value={medico.id} />
+                    <button>
+                      <Link href={`/medicos-bd/${medico.id}`}>
+                        <FaMagnifyingGlass />
+                      </Link>
+                    </button>
+                    <button className="mr-5 ml-5" title="MODIFICAR">
+                      <Link href={"medicos-bd/" + medico.id + "/modificar"}>
+                        <FaPencilAlt />
+                      </Link>
+                    </button>
+                    <button formAction={eliminarMedico} title="ELIMINAR">
+                      ❌
+                    </button>
+                  </form>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
         </Suspense>
       </div>
     </section>

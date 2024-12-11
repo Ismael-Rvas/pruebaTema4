@@ -16,6 +16,9 @@ async function modificarMedico(formData) {
     body: JSON.stringify({ nombre, especialidad, perfil: perfil }),
   });
 
+  // Introducimos un retardo artificial de 2 segundos
+  await new Promise(resolve => setTimeout(resolve, 2000))
+
   redirect(`/medicos-api/${id}`);
 }
 
