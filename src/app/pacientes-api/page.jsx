@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Fallback from "@/components/fallback";
-import Alumnos from "@/components/api-alumnos";
-import AlumnoNuevo from "@/components/api-alumno-nuevo";
+import Alumnos from "@/components/api-pacientes";
+import AlumnoNuevo from "@/components/api-paciente-nuevo";
 import { Suspense } from "react";
 
 
