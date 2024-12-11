@@ -9,8 +9,8 @@ const menu = [
         href: '/'
     },
     {
-        text: 'Alumnos-bd',
-        href: '/alumnos-bd'
+        text: 'Pacientes-bd',
+        href: '/pacientes-bd'
     }
     // {
     //     text: 'Profesores-bd',
