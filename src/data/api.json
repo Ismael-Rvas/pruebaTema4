@@ -1,0 +1,120 @@
+{
+  "alumnos": [
+    {
+      "nombre": "Ismael",
+      "localidad": "Calle lunita",
+      "fechaNacimiento": "1992-03-15",
+      "id": "2"
+    },
+    {
+      "nombre": "juan",
+      "localidad": "Calle aguilar",
+      "fechaNacimiento": "1995-01-18",
+      "id": "3"
+    },
+    {
+      "id": "611e",
+      "nombre": "daniel",
+      "localidad": "cordoba",
+      "fechaNacimiento": "2024-12-06"
+    }
+  ],
+  "profesores": [
+    {
+      "id": "1",
+      "nombre": "Miguel",
+      "especialidad": "Informática",
+      "estadoCivil": "VIUDO"
+    },
+    {
+      "id": "2",
+      "nombre": "Lucas",
+      "especialidad": "Matemáticas",
+      "estadoCivil": "CASADO"
+    },
+    {
+      "id": "3",
+      "nombre": "Susana",
+      "especialidad": "Inglés",
+      "estadoCivil": "CASADO"
+    },
+    {
+      "id": "5472",
+      "nombre": "daniel",
+      "especialidad": "Informatica",
+      "estadoCivil": "Soltero"
+    },
+    {
+      "id": "4",
+      "nombre": "Ana",
+      "especialidad": "Biología",
+      "estadoCivil": "Soltero"
+    },
+    {
+      "id": "5",
+      "nombre": "Carlos",
+      "especialidad": "Química",
+      "estadoCivil": "CASADO"
+    },
+    {
+      "id": "6",
+      "nombre": "Elena",
+      "especialidad": "Física",
+      "estadoCivil": "VIUDO"
+    },
+    {
+      "id": "7",
+      "nombre": "Rafael",
+      "especialidad": "Historia",
+      "estadoCivil": "Soltero"
+    },
+    {
+      "id": "8",
+      "nombre": "María",
+      "especialidad": "Geografía",
+      "estadoCivil": "CASADO"
+    },
+    {
+      "id": "9",
+      "nombre": "Javier",
+      "especialidad": "Educación Física",
+      "estadoCivil": "CASADO"
+    },
+    {
+      "id": "10",
+      "nombre": "Laura",
+      "especialidad": "Música",
+      "estadoCivil": "Soltero"
+    },
+    {
+      "id": "11",
+      "nombre": "Diego",
+      "especialidad": "Arte",
+      "estadoCivil": "CASADO"
+    },
+    {
+      "id": "12",
+      "nombre": "Cristina",
+      "especialidad": "Filosofía",
+      "estadoCivil": "Soltero"
+    },
+    {
+      "id": "13",
+      "nombre": "Fernando",
+      "especialidad": "Lengua",
+      "estadoCivil": "VIUDO"
+    },
+    {
+      "nombre": "Isabel",
+      "especialidad": "Matematicas",
+      "estadoCivil": "CASADO",
+      "id": "14"
+    },
+    {
+      "nombre": "miguel",
+      "especialidad": "Ciencias Sociales",
+      "estadoCivil": "Soltero",
+      "id": "15"
+    }
+  ]
+}
