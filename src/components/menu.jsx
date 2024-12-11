@@ -11,11 +11,11 @@ const menu = [
     {
         text: 'Pacientes-bd',
         href: '/pacientes-bd'
-    }
-    // {
-    //     text: 'Profesores-bd',
-    //     href: '/profesores-bd'
-    // },
+    },
+    {
+        text: 'Medicos-bd',
+        href: '/medicos-bd'
+    },
     // {
     //     text: 'Alumnos-api',
     //     href: '/alumnos-api'
