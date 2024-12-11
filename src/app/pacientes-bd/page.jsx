@@ -4,6 +4,8 @@ import Link from "next/link";
 import { FaPencilAlt } from "react-icons/fa";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import SubmitButton from "@/components/submit-button";
+import { Suspense } from "react";
+import Fallback from "@/components/fallback";
 
 async function eliminarPaciente(formData) {
   "use server";
@@ -88,6 +90,8 @@ async function PacientesPage() {
         <h1 className="text-2xl text-slate-600 py-2  mb-2 border-b-2 border-b-slate-600">
           Lista de pacientes (BD)
         </h1>
+        <Suspense fallback={<Fallback>Obteniendo datos ... </Fallback>}>
+
         <div className="flex flex-col">
           {rows.map((paciente) => (
             <div
@@ -116,6 +120,7 @@ async function PacientesPage() {
             </div>
           ))}
         </div>
+        </Suspense>
       </div>
     </section>
   );

@@ -17,6 +17,18 @@
       "localidad": "Puente Genil",
       "fechaNacimiento": "2018-02-21",
       "id": "3"
+    },
+    {
+      "nombre": "Pedro",
+      "localidad": "cordoba",
+      "fechaNacimiento": "2024-12-20",
+      "id": "29c0"
+    },
+    {
+      "id": "6f31",
+      "nombre": "dani",
+      "localidad": "ss",
+      "fechaNacimiento": "2024-12-20"
     }
   ],
   "medicos": [
