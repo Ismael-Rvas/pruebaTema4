@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 import Link from "next/link";
+import SubmitButton from "@/components/submit-button";
 
 async function modificarPaciente(formData) {
   "use server";
@@ -39,7 +40,7 @@ async function modifyPage({ params }) {
         <input type="text" name="localidad" defaultValue={paciente.localidad} className="p-2 border border-gray-300 rounded-lg w-full mb-3" />
         <label className="text-gray-700 font-medium">Fecha de nacimiento</label>
         <input type="date" name="fechaNacimiento" defaultValue={paciente.fechaNacimiento} className="p-2 border border-gray-300 rounded-lg w-full mb-3" />
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">Modificar</button>
+        <SubmitButton className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">Modificar</SubmitButton>
       </form>
 
       <Link href={`/pacientes-api`} className="mt-6 text-black-600 hover:text-blue-800 transition duration-300 ease-in-out font-bold underline">Volver a la página de pacientes</Link>

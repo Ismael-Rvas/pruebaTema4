@@ -1,6 +1,7 @@
 import connection from "@/lib/mysql";
 import { redirect } from "next/navigation";
 import Link from "next/link";
+import SubmitButton from "@/components/submit-button";
 
 async function modificarMedico(formData) {
   "use server";
@@ -60,9 +61,9 @@ async function modifyPage({ params }) {
           defaultValue={medico.perfil}
           className="p-2 border border-gray-300 rounded-lg w-full mb-3"
         />
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">
+        <SubmitButton className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">
           Modificar
-        </button>
+        </SubmitButton>
       </form>
       <Link
         href={`/medicos-bd`}

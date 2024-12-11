@@ -31,10 +31,10 @@
       "fechaNacimiento": "2024-12-20"
     },
     {
-      "id": "e56a",
       "nombre": "Nuevo",
-      "localidad": "cordoba",
-      "fechaNacimiento": "2024-12-08"
+      "localidad": "Puente Genil",
+      "fechaNacimiento": "2024-12-08",
+      "id": "e56a"
     }
   ],
   "medicos": [
@@ -58,7 +58,7 @@
     },
     {
       "nombre": "Carlos",
-      "especialidad": "Patilogo",
+      "especialidad": "Cardiologo",
       "perfil": "RESIDENTE",
       "id": "e626"
     }
