@@ -12,7 +12,7 @@ CREATE TABLE medicos (
     updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
-INSERT INTO medicos (nombre, especialidad, estadoCivil) 
+INSERT INTO medicos (nombre, especialidad, perfil) 
 VALUES 
   ('Miguel', 'Traumatólogo', 'ESPECIALISTA'),
   ('Lucas', 'Dermatólogo', 'ESPECIALISTA'),
