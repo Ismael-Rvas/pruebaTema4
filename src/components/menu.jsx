@@ -11,19 +11,19 @@ const menu = [
     {
         text: 'Alumnos-bd',
         href: '/alumnos-bd'
-    },
-    {
-        text: 'Profesores-bd',
-        href: '/profesores-bd'
-    },
-    {
-        text: 'Alumnos-api',
-        href: '/alumnos-api'
-    },
-    {
-        text: 'Profesores-api',
-        href: '/profesores-api'
     }
+    // {
+    //     text: 'Profesores-bd',
+    //     href: '/profesores-bd'
+    // },
+    // {
+    //     text: 'Alumnos-api',
+    //     href: '/alumnos-api'
+    // },
+    // {
+    //     text: 'Profesores-api',
+    //     href: '/profesores-api'
+    // }
 ]
 
 function Menu() {
