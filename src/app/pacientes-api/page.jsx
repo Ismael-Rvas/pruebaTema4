@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Fallback from "@/components/fallback";
-import Alumnos from "@/components/api-pacientes";
+import Pacientes from "@/components/api-pacientes";
 import AlumnoNuevo from "@/components/api-paciente-nuevo";
 import { Suspense } from "react";
 
@@ -25,7 +25,7 @@ async function AlumnosPage({ searchParams }) {
             </Suspense>
 
             <Suspense fallback={<Fallback>Obteniendo datos ... </Fallback>}>
-                <Alumnos query={query || ''} />
+                <Pacientes query={query || ''} />
             </Suspense>
         </section>
     );

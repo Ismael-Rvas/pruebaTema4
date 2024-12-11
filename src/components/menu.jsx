@@ -16,10 +16,10 @@ const menu = [
         text: 'Medicos-bd',
         href: '/medicos-bd'
     },
-    // {
-    //     text: 'Alumnos-api',
-    //     href: '/alumnos-api'
-    // },
+    {
+        text: 'Pacientes-api',
+        href: '/pacientes-api'
+    },
     // {
     //     text: 'Profesores-api',
     //     href: '/profesores-api'
